@@ -11,7 +11,6 @@ class Ball:
 
         self.canvas = canvas
         self.form = canvas.create_oval(390, 390, 410, 410, fill = color)
-        #self.canvas.move(self.form, 400, 400)
     def draw(self):
         self.canvas.move(self.form, self.x, self.y)
 
@@ -19,10 +18,20 @@ class Ball:
         position = self.canvas.coords(self.form)
         return position
 
+
+
+
+
+
 class Raquette:
 
-    def __init__(self):
-        pass
+    def __init__(self, tk, color, Xpos, width):
+        canvas.create_rectangle(Xpos -5, canvas.winfo_height()/2 - width, Xpos + 5, canvas.winfo_height()/2 + width, fill= color)
+
+
+
+
+
 
 
 tk = Tk()
@@ -31,6 +40,8 @@ tk.resizable(0, 0)
 canvas = Canvas(tk, width=1280, height=720, bg="#000")
 canvas.pack()
 tk.update()
+
+
 
 #ligne du milieu
 
@@ -48,7 +59,16 @@ canvas.create_line(canvas.winfo_width(), 0, canvas.winfo_width(), canvas.winfo_h
 
 
 
+canvas.create_line(canvas.winfo_width() * (3/32), 0, canvas.winfo_width() * (3/32), canvas.winfo_height(), fill="white")
+canvas.create_line(canvas.winfo_width() * (29/32), 0, canvas.winfo_width() * (29/32), canvas.winfo_height(), fill="white")
+
+
+
 ball = Ball(tk, "#fff")
+
+raquette1 = Raquette(tk, "#fff", canvas.winfo_width() * (3/32), canvas.winfo_height() * (1/16))
+
+raquette2 = Raquette(tk, "#fff", canvas.winfo_width() * (29/32), canvas.winfo_height() * (1/16))
 
 ball.x = 3
 ball.y = 3
