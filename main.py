@@ -4,8 +4,8 @@ import time
 class Ball:
 
     def __init__(self, tk, color):
-        self.x = 0
-        self.y = 0
+        self.x = 3
+        self.y = 3
 
         self.field = {"height" : canvas.winfo_height(), "width" : canvas.winfo_width()}
 
@@ -26,12 +26,58 @@ class Ball:
 class Raquette:
 
     def __init__(self, tk, color, Xpos, width):
-        canvas.create_rectangle(Xpos -5, canvas.winfo_height()/2 - width, Xpos + 5, canvas.winfo_height()/2 + width, fill= color)
+        self.up = -(canvas.winfo_height() * (1/16))
+        self.down = canvas.winfo_height() * (1/16)
+        self.canvas = canvas
+        self.field = self.canvas.winfo_height()
+        self.form = canvas.create_rectangle(Xpos -5, canvas.winfo_height()/2 - width, Xpos + 5, canvas.winfo_height()/2 + width, fill= color)
 
+    def move(self, yMove):
+        self.canvas.move(self.form, 0, yMove)
 
+    def position(self):
+        return self.canvas.coords(self.form)
 
+def move_raquette(e):
 
+    if e.keysym == "Up":
+        raquette1.move(raquette1.up)
+    if e.keysym == "Down":
+        raquette1.move(raquette1.down)
+    if e.keysym == "a" or e.keysym == "A":
+        raquette2.move(raquette2.up)
+    if e.keysym == "q" or e.keysym == "Q":
+        raquette2.move(raquette2.down)
 
+def draw():
+
+    ball.draw()
+
+    # BALLE ET COLLISION MURS
+
+    if (ball.position()[0] <= 0 or ball.position()[2] >= ball.field["width"]):
+        ball.x *= -1
+
+    if (ball.position()[1] <= 0 or ball.position()[3] >= ball.field["height"]):
+        ball.y *= -1
+
+    # RAQUETTES ET MOUVEMENT
+
+    print(raquette1.position())
+
+    if(raquette1.position()[1] < 0):
+        raquette1.move(raquette1.position()[1] * -1)
+
+    if(raquette1.position()[3] > canvas.winfo_height()):
+        raquette1.move((raquette1.position()[3] - canvas.winfo_height())*-1)
+
+    if (raquette2.position()[1] < 0):
+        raquette2.move(raquette2.position()[1] * -1)
+
+    if (raquette2.position()[3] > canvas.winfo_height()):
+        raquette2.move((raquette2.position()[3] - canvas.winfo_height()) * -1)
+
+    tk.after(10, draw)
 
 
 tk = Tk()
@@ -42,11 +88,9 @@ canvas.pack()
 tk.update()
 
 
-
 #ligne du milieu
 
 for i in range(0, 30):
-    print(True)
     if(i % 2 == 0):
         pass
     else:
@@ -68,25 +112,10 @@ ball = Ball(tk, "#fff")
 
 raquette1 = Raquette(tk, "#fff", canvas.winfo_width() * (3/32), canvas.winfo_height() * (1/16))
 
+tk.bind_all("<Key>", move_raquette)
+
 raquette2 = Raquette(tk, "#fff", canvas.winfo_width() * (29/32), canvas.winfo_height() * (1/16))
 
-ball.x = 3
-ball.y = 3
+draw()
 
-while True:
-
-    #BALLE ET COLLISION MURS
-
-    if(ball.position()[0] <= 0 or ball.position()[2] >= ball.field["width"]):
-        ball.x *= -1
-
-    if (ball.position()[1] <= 0 or ball.position()[3] >= ball.field["height"]):
-        ball.y *= -1
-
-
-
-
-
-    ball.draw()
-    tk.update()
-    time.sleep(0.01)
+tk.mainloop()
