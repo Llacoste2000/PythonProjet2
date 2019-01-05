@@ -15,31 +15,31 @@
     <session id="-1095544091">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.3" value="4" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.3" value="5" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="6" />
+          <entry key="py" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="6" />
+          <entry key="Python" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="4761" />
+          <entry key="py" value="9457" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="4761" />
+          <entry key="Python" value="9457" />
         </counts>
       </usages-collector>
     </session>
@@ -49,14 +49,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+            <state relative-caret-position="142">
+              <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="86" selection-end-column="19" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <marker date="1546661410680" expanded="true" signature="504:2105" ph="..." />
-                <marker date="1546661410680" expanded="true" signature="733:742" ph="..." />
-                <marker date="1546661410680" expanded="true" signature="1042:1297" ph="..." />
-                <marker date="1546661410680" expanded="true" signature="1325:2105" ph="..." />
+                <marker date="1546727586009" expanded="true" signature="612:6626" ph="..." />
+                <marker date="1546727586009" expanded="true" signature="841:850" ph="..." />
+                <marker date="1546727586009" expanded="true" signature="1215:2187" ph="..." />
+                <marker date="1546727586009" expanded="true" signature="2184:2187" ph="..." />
+                <marker date="1546727586009" expanded="true" signature="6568:6594" ph="..." />
               </folding>
             </state>
           </provider>
@@ -64,11 +65,7 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-200">
-              <caret column="6" selection-start-column="6" selection-end-column="6" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -80,6 +77,13 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>move_g</find>
+      <find>menu_</find>
+      <find>canvas</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -87,6 +91,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/venv/main.py" />
+        <option value="$PROJECT_DIR$/new.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
@@ -102,6 +107,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -118,7 +124,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -159,6 +164,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="new" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonProjet2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/new.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonProjet2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -183,11 +209,13 @@
     <list>
       <item itemvalue="Python.main" />
       <item itemvalue="Python.test" />
+      <item itemvalue="Python.new" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.new" />
       </list>
     </recent_temporary>
   </component>
@@ -235,23 +263,27 @@
     <entry file="file://$PROJECT_DIR$/../graphsAlgo/translation.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$PROJECT_DIR$/new.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-200">
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
+        <state relative-caret-position="320">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+        <state relative-caret-position="142">
+          <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="86" selection-end-column="19" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <marker date="1546661410680" expanded="true" signature="504:2105" ph="..." />
-            <marker date="1546661410680" expanded="true" signature="733:742" ph="..." />
-            <marker date="1546661410680" expanded="true" signature="1042:1297" ph="..." />
-            <marker date="1546661410680" expanded="true" signature="1325:2105" ph="..." />
+            <marker date="1546727586009" expanded="true" signature="612:6626" ph="..." />
+            <marker date="1546727586009" expanded="true" signature="841:850" ph="..." />
+            <marker date="1546727586009" expanded="true" signature="1215:2187" ph="..." />
+            <marker date="1546727586009" expanded="true" signature="2184:2187" ph="..." />
+            <marker date="1546727586009" expanded="true" signature="6568:6594" ph="..." />
           </folding>
         </state>
       </provider>
